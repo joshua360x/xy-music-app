@@ -19,8 +19,9 @@ class ViewController: UIViewController {
 
     @IBAction func keyPressed(_ sender: UIButton) {
         print("------------------------->")
-        print("this is the title : \(sender.titleLabel?.text))")
+        print("this is the opactity : \(sender.alpha)")
         playSound(soundToPlay: sender.titleLabel?.text ?? "C")
+        sender.alpha = 0.5
     }
     
     func playSound(soundToPlay: String) {
