@@ -21,12 +21,11 @@ class ViewController: UIViewController {
         print("------------------------->")
         print("this is the opactity : \(sender.alpha)")
         playSound(soundToPlay: sender.titleLabel?.text ?? "C")
-        print("start")
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2.0) { // Change `2.0` to the desired number of seconds.
-           // Code you want to be delayed
-            print("end")
-        }
         sender.alpha = 0.5
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+           sender.alpha = 1
+        }
+
     }
     
     func playSound(soundToPlay: String) {
